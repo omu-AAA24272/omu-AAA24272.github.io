@@ -3,10 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webシステム構築基礎　第二回課題</title>
+    <title>Webシステム構築基礎　第3回課題 動く時計</title>
+    <script>
+        function updateClock(){
+            var now = new date();
+            var hours = now.getHours();
+            var minutes = now.gerMinutes();
+            var seconds = now.getSeconds();
+            if (hours < 10) hours = '0' + hours;
+            if (minutes< 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').innerHTML = timeString;
+        }
+        setInterval(updateClock, 1000);
+        window.onload = updateClock;
+    </script>
 </head>
 <body>
-    <h1>Webシステム構築基礎　第二回課題 Phase 0-1: HTML基礎確認</h1>
+    <h0>現在時刻</h0>
+    <div id="clock" style="font-size: 48px; font-weight: bold; color:blue;">
+        00:00:00
+    </div>
+    <h1>Webシステム構築基礎　第3回課題 Phase 0-1: HTML基礎確認</h1>
     <div>
         <h2>📝 課題1: 自己紹介セクション作成</h2>
         <p><strong>指示:</strong> 下記のHTMLコメント部分に、あなたの自己紹介を書いてください。</p>
