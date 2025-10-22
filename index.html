@@ -8,7 +8,7 @@
         function updateClock() {
             var now = new Date();
             var hours = now.getHours();
-            var minutes = now.gerMinutes();
+            var minutes = now.getMinutes();
             var seconds = now.getSeconds();
             if (hours < 10) hours = '0' + hours;
             if (minutes < 10) minutes = '0' + minutes;
@@ -23,7 +23,7 @@
 <body>
     <h1>現在時刻</h1>
     <div id="clock" style="font-size: 48px; font-weight: bold; color:red;">
-        timeString
+        00:00:00
     </div>
     <h1>Webシステム構築基礎　第3回課題 Phase 0-1: HTML基礎確認</h1>
     <div>
